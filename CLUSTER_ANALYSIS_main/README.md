@@ -11,7 +11,7 @@ Checked functionality on Matlab_R2016a
 
 
 ## GOAL: 
-This code is used to identify clusters from localizations list files. It will give information about the coordinates of clusters centroids and features of the clusters (localizations per cluster, area in nm^2 of each cluster, distance in nm between closest clusters (NND)). Also, it will discriminate between clusters InIslands (clusters identified in high density regions) and Single clusters.
+This code is used to identify clusters from localizations list files. It will give information about the coordinates of clusters centroids and features of the clusters (localizations per cluster, area in nm<sup>2</sup> of each cluster, distance in nm between closest clusters (NND)). Also, it will discriminate between clusters InIslands (clusters identified in high density regions) and Single clusters.
 
 
 ## INPUT: 
@@ -33,8 +33,8 @@ More in details:
 
   Row 20-21-22:
    - medianNum= median of number of localizations per cluster
-   - medianArea[nm^2]= median of cluster area (nm^2) calculated as π(sigAve*original_pixel_size)^2
-   - medianDensity= medianNum/medianArea[nm^2]
+   - medianArea[nm<sup>2</sup>]= median of cluster area (nm<sup>2</sup>) calculated as π(sigAve*original_pixel_size)<sup>2</sup>
+   - medianDensity= medianNum/medianArea[nm<sup>2</sup>]
    
   Column A-B-C-D-E-F-G-H-I-J-K-L-M:
    - X[pix]= x coordinate of cluster centroid in px 
@@ -43,7 +43,7 @@ More in details:
    - sigX[pix]= standard deviation of x coordinate of cluster centroid in px
    - sigY[pix]= standard deviation of y coordinate of cluster centroid in px
    - sigAve[pix]= (sigX+sigY)/2. It is used as radius to calculate the cluster area
-   - sigQuad[pix]= sqrt(sigX^2+sigY^2)
+   - sigQuad[pix]= sqrt(sigX<sup>2</sup>+sigY<sup>2</sup>)
    - Z[nm]= z coordinate of cluster centroid in px 
    - sigZ[nm]= standard deviation of z coordinate of cluster centroid in px
    - NND[nm] InIsland= distance in nm between the centroids of two nearest neighbour clusters (only considering InIsland clusters
@@ -63,22 +63,22 @@ More in details:
    In details, the median (and average) for Single/InIsland/all clusters of:
  
   -  localizations/cluster
-  -  clusters area (nm^2)
+  -  clusters area (nm<sup>2</sup>)
   -  clusters NND (nm)
   
   Also, 2 histograms displaying:
   
-  - the % of Super Resolution Area occupied by clusters area. Cluster area is (π*(SIG)*original_pixel_size)^2 (i.e.pixel size 160nm). SIG=(sdx+sdy)/2 of cluster centroid coordinates. 
+  - the % of Super Resolution Area occupied by clusters area. Cluster area is (π*(SIG)*original_pixel_size)<sup>2</sup> (i.e.pixel size 160nm). SIG=(sdx+sdy)/2 of cluster centroid coordinates. 
   
-      The title of the plot also reports the Conventional Area (um^2) and the SR_area/Conv_area (%).
+      The title of the plot also reports the Conventional Area (um<sup>2</sup>) and the SR_area/Conv_area (%).
   
-      Conv Area (um^2) is the number of pixels containing localizations multiplied for the area of one pixel (i.e. 0.160^2 um^2).
+      Conv Area (um<sup>2</sup>) is the number of pixels containing localizations multiplied for the area of one pixel (i.e. 0.160<sup>2</sup> um<sup>2</sup>).
   
-      SR Area (um^2) depends on the number of localization precision. It is the number of pixels containing localizations multiplied for the area of one pixel, in an image with pixels as big as the localization precision (i.e. 9nm x 9nm ).
+      SR Area (um<sup>2</sup>) depends on the number of localization precision. It is the number of pixels containing localizations multiplied for the area of one pixel, in an image with pixels as big as the localization precision (i.e. 9nm x 9nm ).
   
-      Both Conv_area and SR_area are generated on the total number of localizations BEFORE the cluster analysis (1/um^2).
+      Both Conv_area and SR_area are generated on the total number of localizations BEFORE the cluster analysis (1/um<sup>2</sup>).
   
-  - the number of clusters (Single/InIslands) or Islands divided per the SR Area (um^2).  
+  - the number of clusters (Single/InIslands) or Islands divided per the SR Area (um<sup>2</sup>).  
   
 ##### .png: 
 - Same as the .fig file, but in .png format.
@@ -104,7 +104,7 @@ More in details:
 - Pixel size used for the first density image generated. A 2D histogram of the number of localizations per pixel is created.
 
 ##### 	sum_roi_size: 
-- Dimension of the square kernel in pixels to generate binary image based on the threshold. The value should be an odd integer. E.g., sum_roi_size= 5, kernel dimension 5 x 5 pixels^2.
+- Dimension of the square kernel in pixels to generate binary image based on the threshold. The value should be an odd integer. E.g., sum_roi_size= 5, kernel dimension 5 x 5 pixels<sup>2</sup>.
         Each pixel contains a certain number of molecules (a 2D histogram with each pixel size equal to analysis_pixel_size in nm). The script will sum the number of molecules in a 'roi' x 'roi' area surrounding each pixel and put the sum in the pixel under consideration.
 
 ##### sum_threshold: 
