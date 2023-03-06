@@ -18,7 +18,7 @@ This code is used to identify clusters from localizations list files. It will gi
 - .bin files of localizations list. (First generate a list of localizations of ROIs of interest. Make also sure that they are properly corrected for drift.) 
 
 ###### Note: 
-.bin file is the output format of the Nikon NSTORM localization files. In case your localization lists are not in that format, you may want to use Insight3.m file to generate them. 
+.bin file is the output format of the Nikon N-STORM localization files. In case your localization lists are not in that format, you may want to use Insight3.m file to generate them. 
 
 
 
