@@ -33,7 +33,7 @@ More in details:
 
   Row 20-21-22:
    - medianNum= median of number of localizations per cluster
-   - medianArea[nm<super>^2</super>]= median of cluster area (nm^2) calculated as π(sigAve*original_pixel_size)^2
+   - medianArea[nm^2]= median of cluster area (nm^2) calculated as π(sigAve*original_pixel_size)^2
    - medianDensity= medianNum/medianArea[nm^2]
    
   Column A-B-C-D-E-F-G-H-I-J-K-L-M:
