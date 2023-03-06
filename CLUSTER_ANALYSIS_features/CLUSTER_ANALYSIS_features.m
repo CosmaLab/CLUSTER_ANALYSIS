@@ -35,7 +35,7 @@
 clear all
 close all
 
-Root = 'C:\Users\lmartin\Downloads\CLUSTER_ANALYSIS_main-main\CLUSTER_ANALYSIS_main-main\Examples\Carota\cluster_analysis precision 10';
+Root = 'Directory';
 
 %% Variables to be obtained
 NumClusters = [];
