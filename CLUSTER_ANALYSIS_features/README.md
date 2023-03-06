@@ -28,7 +28,7 @@ The file name will be: "_Data_Summary".
 
 -Number_Orig_Locs: total original number of localizations in the raw .bin BEFORE the cluster analysis
 
--AreaLocs_um2= area occupied by localizations (um^2). Number of px containing localizations * (original px size (um))^2
+-AreaLocs_um2= area occupied by localizations (um<sup>2</sup>). Number of px containing localizations * (original px size (um))<sup>2</sup>
 
 -NumClusters: number of all clusters (Single+InIsland)
 
@@ -40,7 +40,7 @@ The file name will be: "_Data_Summary".
 
 -mean (column H-O) and median (column P-W) for all clusters (column H-I-J, P-Q-R), InIsland clusters (column K-L-M, S-T-U), Single clusters (column N-O, V-W) of:
  - number of localizations per cluster
- - area (nm^2) of cluster. π*(SIG)^2. [SIG=(sdx+sdy)/2] of cluster centroid coordinates.
+ - area (nm<sup>2</sup>) of cluster. π*(SIG)<sup>2</sup>. [SIG=(sdx+sdy)/2] of cluster centroid coordinates.
  - NND (nm) between neighbouring clusters (distance between centroids of neighbouring clusters)
 
 
