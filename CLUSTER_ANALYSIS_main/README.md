@@ -89,7 +89,7 @@ More in details:
 ## PARAMETERS TO SELECT:	
 
 ##### image_width/height: 
-- Size of the image in pixels. In the NSTORM the default is 256, but other microscopes use different ROI sizes.
+- Size of the image in pixels. In the N-STORM the default is 256, but other microscopes use different ROI sizes.
 
 ##### use_drift_corrected_xy: 
 - In all general cases, this should be left in 1 （True). It is always better to use the drift corrected file.
@@ -146,7 +146,7 @@ More in details:
 
 ## HOW TO USE: 
 
-1.	Open function ">>CLUSTER_ANALYSIS_main.m".
+1.	Open function CLUSTER_ANALYSIS_main.m
 
 2.  Write in rootdir the string of the directory in which you want the output data folder to be created. Write plotstats = 'true' if you want to display analysis plots. Write in valuespix2nm a string with the correct value of nanometers to which one pixel of your images corresponds to (E.g., 160).
 
