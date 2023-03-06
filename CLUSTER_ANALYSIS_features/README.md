@@ -49,7 +49,7 @@ The file name will be: "_Data_Summary".
 
 1.	Open function "CLUSTER_ANALYSIS_features.m" 
 
-2.	In 'Root', write as a string the folder of cluster_analysis .mat files you are going to run. The output will be saved as a .xlsx file just outside this folder. (Just add a "\" at the end of the string if you want the .xlsx to be written inside the folder.)
+2.	In 'Root', write as a string the folder of cluster_analysis .mat files you are going to run. The output will be saved as a .xlsx file just outside this folder. (Just add a \ at the end of the string if you want the .xlsx to be written inside the folder.)
 
 2.	Run the code
 
