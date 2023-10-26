@@ -6,6 +6,7 @@ Code by Alvaro Castells
 README and annotation updates by Alvaro Castells.
 Annotations by Laura Martin, 18-12-2021.
 Further annotations by Laura Martin, 18-1-2023.
+Blanca Bruschi added the calculations of the density of the cell and of the clusters density, 24-10-2023.
 
 Checked functionality on Matlab_R2016a
 
@@ -20,8 +21,7 @@ This code is used to quickly obtain a summary of the results of a batch of clust
 
 
 ### OUTPUT:
-.xlsx file with the information organized in rows by cell, and columns for every parameter that we are looking at. 
-The file name will be: "_Data_Summary".
+.xlsx file and .txt file with the information organized in rows by cell, and columns for every parameter that we are looking at. The file name will be: "_Data_Summary".
 
 
 -directory of the .mat file analysed
@@ -29,6 +29,8 @@ The file name will be: "_Data_Summary".
 -Number_Orig_Locs: total original number of localizations in the raw .bin BEFORE the cluster analysis
 
 -AreaLocs_um2= area occupied by localizations (um<sup>2</sup>). Number of px containing localizations * (original px size (um))<sup>2</sup>
+
+-Cell_density = Number_Orig_Locs/AreaLocs_um2
 
 -NumClusters: number of all clusters (Single+InIsland)
 
@@ -38,18 +40,22 @@ The file name will be: "_Data_Summary".
 
 -NumberOfIslands: number of Islands
 
--mean (column H-O) and median (column P-W) for all clusters (column H-I-J, P-Q-R), InIsland clusters (column K-L-M, S-T-U), Single clusters (column N-O, V-W) of:
- - number of localizations per cluster
- - area (nm<sup>2</sup>) of cluster. π*(SIG)<sup>2</sup>. [SIG=(sdx+sdy)/2] of cluster centroid coordinates.
- - NND (nm) between neighbouring clusters (distance between centroids of neighbouring clusters)
-
+-mean (column I-S) and median (column T-AD) for all clusters (column I-J-K-L, T-U-V-W), InIsland clusters (column M-N-O-P, X-Y-Z-AA), Single clusters (column Q-R-S, AB-AC-AD) of:
+    
+    -	number of localizations per cluster.
+    
+    -	area (nm^2) of cluster. π*(SIG)2. [SIG=(sdx+sdy)/2] of cluster centroid coordinates.
+    
+    -	density (locs/nm^2) of clusters: number of localizations/area of cluster.
+    
+    -	NND (nm) between neighbouring clusters (distance between centroids of neighbouring clusters).
 
 
 ### HOW TO USE: 
 
 1.	Open function "CLUSTER_ANALYSIS_features.m" 
 
-2.	In 'Root', write as a string the folder of cluster_analysis .mat files you are going to run. The output will be saved as a .xlsx file just outside this folder. (Just add a \ at the end of the string if you want the .xlsx to be written inside the folder.)
+2.	In 'Root', write as a string the folder of cluster_analysis .mat files you are going to run. The output will be saved as a .xlsx file just outside this folder. (Just add a "\" at the end of the string if you want the .xlsx to be written inside the folder.)
 
 2.	Run the code
 
@@ -57,5 +63,7 @@ The file name will be: "_Data_Summary".
 
 4.	Press 'Done' on the GUI
 
-5.	Output will be generated and a .xlsx will be created just outside the folder previously defined. 
+5.	Output will be generated and a .xlsx and a .txt will be created just outside the folder previously defined. 
+
+
 
