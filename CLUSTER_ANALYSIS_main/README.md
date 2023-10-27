@@ -156,4 +156,4 @@ More in details:
 
 5.	Select the .bin files that will be analyzed.
 
-6.	An ouput data folder called "cluster_analysis" will be created inside the root directory. Inside the folder output files will be automatically saved:  .bin, .mat, .xlsx, .ddc, .png, .fig. Each file will be named with the original list name + the abbreviations of parameters used for the analysis + file extension.
+6.	An ouput data folder called "cluster_analysis" will be created inside the root directory. Inside the folder output files will be automatically saved:  .bin, .mat, .xyn, .ddc, .png, .fig. Each file will be named with the original list name + the abbreviations of parameters used for the analysis + file extension.
