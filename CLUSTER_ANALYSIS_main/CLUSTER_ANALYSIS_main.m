@@ -56,12 +56,14 @@ for fl = 1:size(files.data,1)
               if plotstats
                   
                   %% Uncomment the following line to save the cluster data for future comparison
-                  % compareClusterMetrics
-                  
+                                    
                   %%2021-12-17 in saveClusterMetricData, Laura added variable 'allResults' 
                   [xynData, mask, ClustStats, ddcData, savefile] = saveClusterMetricData( params, ClusterResults, pathstr, subFolder, fileName );
                   saveClusterMetricData( params, ClusterResults, pathstr, subFolder, fileName );
                   [~, filename, ~] = fileparts(params.i3file);
+
+                  %%% Laura Martin moved compareClusterMetrics here, after .mat file is saved. Oct 2023
+                  % compareClusterMetrics
                   
                   fg = plotClusterStat(filename, xynData, mask, ClustStats, ddcData, params);
                   % save the plotted data
