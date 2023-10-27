@@ -72,7 +72,7 @@ More in details:
   
       The title of the plot also reports the Conventional Area (um<sup>2</sup>) and the SR_area/Conv_area (%).
   
-      Conv Area (um<sup>2</sup>) is the number of pixels containing localizations multiplied for the area of one pixel (i.e. 0.160<sup>2</sup> um<sup>2</sup>).
+      Conv Area (um<sup>2</sup>) is the number of pixels (of the original image; i.e. 256x256 px) containing localizations multiplied for the area of one pixel (i.e. 0.160<sup>2</sup> um<sup>2</sup>).
   
       SR Area (um<sup>2</sup>) depends on the number of localization precision. It is the number of pixels containing localizations multiplied for the area of one pixel, in an image with pixels as big as the localization precision (i.e. 9nm x 9nm ).
   
