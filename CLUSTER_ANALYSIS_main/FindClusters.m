@@ -330,7 +330,7 @@ for j=1:length(m)
     
     Mi_c=zeros(ceil(size(Mi)*factor));
     % JSB 2015.08.03 comment out, calculate within the for loop below
-    % If the size of the island gets too big then calculateing the Gaussian
+    % If the size of the island gets too big then calculating the Gaussian
     % over a large number of pixels is pointless since the contributions to
     % the Gaussian signal gets small after about 3 sigma from the centroid pixel location
     
